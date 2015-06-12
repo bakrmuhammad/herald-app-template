@@ -2,7 +2,32 @@
 
 This is a Python/Google Doc-powered static page generator for building interactive graphics on the Miami Herald's website. 
 
-This was inspired by [NPR visual team's app template](https://github.com/nprapps/app-template) and is a work in progress. More updates to come.
+This was inspired by [NPR visual team's app template](https://github.com/nprapps/app-template) and is a work in progress.
+
+
+###What's in the box
+
+CSS:
+
++ Bootstrap - Responsiveness
++ Sinclair - Miami Herald styles
++ Base – Custom styling written primarily in SASS
+
+
+JS:
+
++ D3 - Data Visualizations
++ jQuery – DOM manipulation
++ Bootsrap – Bootstrap components
++ Modernizr – Detection
++ Sinclair – Herald default scripts
+	
+
+HTML:
+
++ `base.html` – Uniform page. This is where everything but the content is built, including SEO and footer.
+
++ `index.html` - Where the content lives, which includes headline, byline and texts.
 
 
 ###How to start building
