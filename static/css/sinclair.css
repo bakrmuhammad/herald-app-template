@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+.mobile-img {
+  display: none; }
+
+.sig {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+body {
+  color: #282828;
+  padding-top: 80px;
+  background-color: white; }
+
+.headline {
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 1.2em;
+  margin: 10px 0 10px 0;
+  font-weight: 700;
+  color: #282828; }
+
+.byline {
+  display: table;
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 16px; }
+  .byline .name {
+    font-weight: bold;
+    display: block; }
+  .byline .upper {
+    text-transform: uppercase; }
+  .byline .email, .byline .date {
+    font-size: 14px;
+    display: block; }
+
+.readout {
+  margin-top: 1em;
+  color: #282828;
+  font-family: "Roboto Slab", "Times New Roman", Times, serif;
+  font-size: 16px; }
+
+.subhed {
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.instructions {
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #666666; }
+
+#sources {
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #666666;
+  border-top: 1px #bbbbbb solid;
+  display: table; }
+  #sources p {
+    padding-top: 1em; }
+
+.footer-list {
+  text-align: center;
+  padding: 0px 0 20px 0; }
+  .footer-list a {
+    color: #333333;
+    display: inline; }
+  .footer-list img {
+    display: block;
+    margin: 1em auto;
+    box-shadow: none; }
+
+.footer-text {
+  margin-right: 0.5em;
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px; }
+
+@media (max-width: 768px) {
+  .large-img {
+    display: none; }
+
+  .mobile-img {
+    display: block; } }

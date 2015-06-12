@@ -1,0 +1,102 @@
+<!---
+  _______ _____  ________  _      _____   ____  __ _________  ____
+ / ___/ // / _ \/  _/ __/ | | /| / / _ | / __/ / // / __/ _ \/ __/
+/ /__/ _  / , __/ /_\ \   | |/ |/ / __ |_\ \  / _  / _// , _/ _/  
+\___/_//_/_/|_/___/___/   |__/|__/_/ |_/___/ /_//_/___/_/|_/___/  
+                                                                                                                            
+Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ COPY.content.seo_description }}">
+  <meta name="author" content="{{ COPY.content.reporter_name }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="{{ COPY.content.key_words }}">
+  <meta name="copyright" content="&copy; 2015 Miami Herald">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:title" content="{{ COPY.content.headline }}"/>
+  <meta property="og:type" content="article"/> 
+  <meta property="og:description" content="{{ COPY.content.seo_description }}"/>
+  <meta property="og:image" content="{{ COPY.content.fb_img }}"/>
+  <meta property="og:url" content="{{ COPY.content.url }}"/>
+  <meta property="og:site_name " content="Miami Herald"/> 
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@MiamiHerald">
+  <meta name="twitter:creator" content="@MiamiHerald">
+  <meta name="twitter:title" content="{{ COPY.content.headline }}">
+  <meta name="twitter:description" content="{{ COPY.content.seo_description }}">
+  <meta name="twitter:image" content="{{ COPY.content.fb_img }}">
+
+  <link rel="icon" type="image/jpg" href="http://www.miamiherald.com/static/theme/miamiherald/base/ico/favicon.png"/>
+  <link rel="image_src" href="{{ COPY.content.fb_img }}" />
+
+  <title>{{ COPY.content.headline }}</title>
+
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/lib/bootstrap.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand-img large-img" href="http://miamiherald.com">
+          <img src="../static/img/logo_b.png" class="logo">
+        </a>
+        <a class="navbar-brand-img mobile-img" href="http://miamiherald.com">
+          <img src="../static/img/h_b.png" class="logo">
+        </a>
+        <a class="navbar-brand sig" href="{{ COPY.content.link }}">
+      {{ COPY.content.sig }}
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Share<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://pubsys.miamiherald.com/static/media/projects/2015/cruel-and-unusual/" target="_blank">Facebook</a></li>
+                  <li><a href="https://twitter.com/home?status=Cruel%20and%20Unusual:%20Deadly%20abuse%20in%20Florida's%20prison%20%E2%80%93%20http://hrld.us/cruel-and-unusual%20via%20%40MiamiHerald." target="_blank">Twitter</a></li>
+                  <li><a href="https://plus.google.com/share?url=http://pubsys.miamiherald.com/static/media/projects/2015/cruel-and-unusual/" target="_blank">Google Plus</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div><!-- /.navbar-collapse --></nav>
+
+      {% block content %}
+      {% endblock content %}
+  
+  <div class="footer-list roboto upper fat xsmall">
+    <a href="http://miamiherald.com" target="_blank">
+      <img src="http://pubsys.miamiherald.com/static/media/projects/libraries/images/logo_b-tiny.png" class='logo'>
+    </a>
+    <a href="http://www.miamiherald.com/terms_of_service" target="_blank" class='footer-text'>Terms of Service</a>
+    <a href="http://www.miamiherald.com/privacy_policy" target="_blank" class='footer-text'>Privacy Policy</a>
+    <a href="http://www.miamiherald.com/copyright" target="_blank" class='footer-text'>Copyright</a>
+    <a href="http://www.miamiherald.com/contact-us" target="_blank" class='footer-text'>Contact</a></div>
+
+  <!-- LIBS -->
+  <script src="{{ url_for('static', filename='js/lib/modernizr.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lib/jquery-1.11.3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lib/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lib/d3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/lib/sinclair.js') }}"></script
+  
+  <!-- SCRIPTS -->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+  </body>
+</html>
