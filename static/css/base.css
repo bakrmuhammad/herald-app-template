@@ -12,6 +12,13 @@ body, html {
   font-weight: bold;
   text-transform: uppercase; }
 
+.graphic-label {
+  font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  color: #cc0000;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 .headline {
   font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
   font-size: 50px;
