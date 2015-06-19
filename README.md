@@ -49,3 +49,5 @@ HTML:
 8. Whenver you want to update text, `cd` into project folder and run `fab text`.
 
 Note: Make sure tab in Doc is named `content` and include that in template tags in `index.html` and `base.html`. 
+
+Questions or suggestions? Contact me at [calcantara@miamiherald.com](mailto:calcantara@miamiherald.com)
