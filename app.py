@@ -24,3 +24,5 @@ def index():
 if __name__ == '__main__':
 	main.debug = True
 	main.run()
+
+print "App is now running..."

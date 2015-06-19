@@ -12,6 +12,7 @@ from oauth import get_document, get_credentials
 from termcolor import colored
 
 @task(default=True)
+
 def update():
     """
     Downloads a Google Doc as an Excel file.

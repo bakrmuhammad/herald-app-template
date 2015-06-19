@@ -38,7 +38,9 @@ HTML:
 
 3. In Terminal, `cd` into folder.
 
-4. Active LiveReload and place folder into app.
+4. Activate LiveReload and place folder into app.
+
+4a. If on new machine, run `pip install -r requirements.txt` to install dependencies.
 
 5. Run `python app.py` to start app. 
 
