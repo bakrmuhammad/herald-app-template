@@ -1,8 +1,8 @@
 'use strict';
 
-//========
+//=========
 // MODULES
-//========
+//=========
 var gulp = require('gulp'),
     fs = require('fs'),
     browserSync = require('browser-sync'),
@@ -27,9 +27,9 @@ var src = {
     data: ['app/js/libs/data/data.csv','app/js/libs/data/data.json']
 };
 
-//========
-// TASKS
-//========
+//===========
+// TASK LIST
+//===========
 
 // Compile SCSS into CSS
 gulp.task('sass', function() {
@@ -43,16 +43,15 @@ gulp.task('sass', function() {
 gulp.task('render', function () {
 
     // Pull in nunjuck and vinyl-map modules
-    var nj = require('nunjucks');
-    var map = require('vinyl-map');
+    var nj = require('nunjucks'),
+        map = require('vinyl-map'),
+        data = JSON.parse(fs.readFileSync('data.json', 'utf8')),
 
-    var data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+        nunjuckified = map(function(code){
+           return nj.renderString(code.toString(), data);
+        }),
 
-    var nunjuckified = map(function(code){
-       return nj.renderString(code.toString(), data);
-    });
-
-    var env = nj.configure('app', {watch: false});
+        env = nj.configure('app', {watch: false});
 
     nunjucksRender.nunjucks.configure(['app/templates/']);
     
@@ -68,7 +67,6 @@ gulp.task('jshint', function (){
       .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('jshint-stylish'));
 });
-
 
 // Static server + watch scss/html/js files
 gulp.task('serve', ['sass', 'render'], function() {
@@ -120,14 +118,13 @@ gulp.task('copy', function() {
     ];
 
     return gulp.src(files)
-      .pipe(copy('build/'));
+        .pipe(copy('build/'));
 
 });
 
-
-//===================
+//====================
 // COMMAND LINE TASKS  
-//===================
+//====================
 
 // Run server for development
 gulp.task('default', ['serve']);

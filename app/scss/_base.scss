@@ -66,7 +66,6 @@ body,html {
 	background-color: $white;
 }
 
-
 //NAVIGATION
 .mobile-img {
 	display: none;
@@ -87,6 +86,7 @@ body,html {
 
 }
 
+//HEADLINE
 .headline {
   font-family: $sans-serif;
   font-size: $headline;
@@ -95,6 +95,7 @@ body,html {
   font-weight: 700;
 }
 
+//BYLINE
 .byline {
 	display: table;
 	font-family: $sans-serif;
@@ -115,6 +116,7 @@ body,html {
 	}
 }
 
+//TEXT
 .readout {
 	margin-top: 1em;
 	font-family: $serif;
@@ -122,6 +124,7 @@ body,html {
 
 }
 
+//SUBHED
 .subhed {
 	font-family: $sans-serif;
 	font-size: $s;
@@ -129,6 +132,7 @@ body,html {
 	text-transform: uppercase; 
 }
 
+//INSTRUCTIONS
 .instructions {
 	background: whitesmoke;
 	font-family: $sans-serif;
@@ -138,6 +142,7 @@ body,html {
 	margin-bottom: 1em; 
 }
 
+//SOURCES
 #sources {
 	font-family: $sans-serif;
 	font-size: $xs;
@@ -151,6 +156,7 @@ body,html {
 
 }
 
+//FOTER
 .footer-list {
 	text-align: center;
 	padding: 0px 0 20px 0;
