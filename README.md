@@ -2,7 +2,7 @@
 
 This is the Miami Herald's template for buidling interactive graphics online.
 
-The template is an upgrade from a [previous version](https://github.com/chrisalcantara/herald-app-template) written in Python.
+The template is an upgrade from a [previous version](https://github.com/chrisalcantara/herald-app-template/tree/1ee9f55245a47e842a0dc53674c301fd6b68b51d) written in Python.
 
 The new version, inspired by The Texas Tribune's [graphic template](https://github.com/texastribune/newsapps-graphic-kit), is written in JavaScript with task management handled by [Gulp](http://gulpjs.com/).
 
