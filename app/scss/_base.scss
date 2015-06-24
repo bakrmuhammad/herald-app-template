@@ -1,0 +1,194 @@
+// -----
+// MIAMI HERALD STYLESHEET
+// Made with love by Chris Alcantara (@chrisalcantara)
+// -----
+
+// ===========
+// TYPOGRAPHY
+// ===========
+
+
+// Roboto Slab: Default serif
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300");
+
+// Roboto: Default sans-serif
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+
+
+//FONTS
+$sans-serif: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+$serif: "Roboto Slab", "Times New Roman", Times, serif;
+
+//FONT SIZE
+$base: 16px;
+$headline: 50px;
+$xxl: 36px;
+$xl: 28px;
+$l: 22px;
+$m: 18px;
+$s: 14px;
+$xs: 12px;
+
+
+//========
+//COLORS
+//========
+
+//HERALD COLORS
+$herald-blue: #006DBD;
+$white: #fff;
+
+//DEFAULTS
+$red: #cc0000;
+
+//POLITICAL PARTY COLORS
+$dem-blue: #1775AE;
+$rep-red: #D64946;
+
+//SHADES OF GRAY
+$black: #000;
+$bodytext-black: #282828;
+$text-gray: #666;
+$line-gray: #bbb;
+$border-gray: #ccc;
+$href-offwhite: #ddd;
+$background-gray: #f5f5f5;
+
+
+//================
+//PAGE COMPONENTS
+//================
+
+//BODY
+body,html {
+	color: $bodytext-black;
+	padding-top: 40px;
+	background-color: $white;
+}
+
+
+//NAVIGATION
+.mobile-img {
+	display: none;
+}
+
+.sig {
+	font-weight: bold;
+	text-transform: uppercase; 
+}
+
+//LABEL
+.graphic-label {
+  font-family: $sans-serif;
+  color: $red;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase; 
+
+}
+
+.headline {
+  font-family: $sans-serif;
+  font-size: $headline;
+  line-height: 1em;
+  margin: 0px 0 20px 0;
+  font-weight: 700;
+}
+
+.byline {
+	display: table;
+	font-family: $sans-serif;
+	font-size: $base; 
+	
+	.name {
+		font-weight: bold;
+		display: block;
+	}
+
+	.upper {
+		text-transform: uppercase;
+	}
+
+	.email, .date {
+		font-size: $s;
+		display: block;
+	}
+}
+
+.readout {
+	margin-top: 1em;
+	font-family: $serif;
+	font-size: $base; 
+
+}
+
+.subhed {
+	font-family: $sans-serif;
+	font-size: $s;
+	font-weight: bold;
+	text-transform: uppercase; 
+}
+
+.instructions {
+	background: whitesmoke;
+	font-family: $sans-serif;
+	font-weight: 300;
+	line-height: 1.3;
+	padding: 1em;
+	margin-bottom: 1em; 
+}
+
+#sources {
+	font-family: $sans-serif;
+	font-size: $xs;
+	color: $text-gray;
+	border-top: 1px $line-gray solid;
+	display: table;
+
+	p {
+		padding: 1em 0 0 0;
+	}
+
+}
+
+.footer-list {
+	text-align: center;
+	padding: 0px 0 20px 0;
+
+	a {
+    	display: inline; 
+    }
+    
+    img {
+	    display: block;
+	    margin: 1em auto;
+	    box-shadow: none; 
+	}
+	.footer-text {
+		margin-right: 1em;
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: $xs;
+	}
+}
+
+//RESPONSIVE
+$large-display: 1200px;
+$medium-display: 992px;
+$small-display: 767px;
+$tiny-display: 400px;
+
+@media (max-width: $small-display) {
+	.large-img {
+    	display: none;
+    }
+
+    .mobile-img {
+    	display: block; 
+	}
+
+	.headline {
+		font-size: 30px;
+	}
+}
