@@ -1,59 +1,69 @@
-// -----
+
 // MIAMI HERALD STYLESHEET
 // Made with love by Chris Alcantara (@chrisalcantara)
-// -----
+
 
 // ===========
 // TYPOGRAPHY
 // ===========
 
-
 // Roboto Slab: Default serif
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300");
 
 // Roboto: Default sans-serif
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
 
+// Roboto Condensed: Subheds and labels
+@import url("http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300");
 
 //FONTS
 $sans-serif: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+
+$sans-serif-condensed: "Roboto Condensed", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+
 $serif: "Roboto Slab", "Times New Roman", Times, serif;
 
-//FONT SIZE
+//STANDARD FONT SIZES
 $base: 16px;
-$headline: 50px;
 $xxl: 36px;
 $xl: 28px;
-$l: 22px;
-$m: 18px;
-$s: 14px;
+$lg: 22px;
+$md: 18px;
+$sm: 14px;
 $xs: 12px;
 
+//CUSTOM SIZES
+$headline: 40px;
+
+//HEADERS
+h1,h2,h3,h4,h5,h6 {
+	font-family: $sans-serif-condensed;
+}
 
 //========
 //COLORS
 //========
 
-//HERALD COLORS
+//STANDARD COLORS
+$black: #000;
+$red: #aa0000;
+$yellow: #ffea00;
+$green: #2ca25f;
 $herald-blue: #006DBD;
-$white: #fff;
-
-//DEFAULTS
-$red: #cc0000;
-
-//POLITICAL PARTY COLORS
-$dem-blue: #1775AE;
-$rep-red: #D64946;
+$white: #ffffff;
 
 //SHADES OF GRAY
-$black: #000;
 $bodytext-black: #282828;
 $text-gray: #666;
+$text-gray-source: #9b9b9b;
 $line-gray: #bbb;
 $border-gray: #ccc;
 $href-offwhite: #ddd;
 $background-gray: #f5f5f5;
 
+//POLITICAL PARTY COLORS
+$dem-blue: #1775AE;
+$rep-red: #D64946;
 
 //================
 //PAGE COMPONENTS
@@ -81,7 +91,7 @@ body,html {
   font-family: $sans-serif;
   color: $red;
   display: block;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase; 
 
 }
@@ -91,7 +101,7 @@ body,html {
   font-family: $sans-serif;
   font-size: $headline;
   line-height: 1em;
-  margin: 0px 0 20px 0;
+  margin: 7.5px 0 10px 0;
   font-weight: 700;
 }
 
@@ -99,7 +109,8 @@ body,html {
 .byline {
 	display: table;
 	font-family: $sans-serif;
-	font-size: $base; 
+	font-size: $sm;
+	display: block;
 	
 	.name {
 		font-weight: bold;
@@ -111,7 +122,6 @@ body,html {
 	}
 
 	.email, .date {
-		font-size: $s;
 		display: block;
 	}
 }
@@ -119,34 +129,73 @@ body,html {
 //TEXT
 .readout {
 	margin-top: 1em;
+	display: block;
 	font-family: $serif;
-	font-size: $base; 
+	font-size: $base;
+	line-height: 1.4;
+	text-align: left;
 
+	a {
+		color: $red;
+	}
+
+	//PHOTOS
+	.photo {
+		width: 100%;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	.caption {
+		font-family: $sans-serif;
+		margin: 0.25em 0;
+		font-size: $sm;
+		color: $text-gray;
+		display: inline-block;
+	}
+
+	.photog {
+		font-family: $sans-serif;
+		margin: 0.25em 0;
+		font-size: $sm;
+		color: $text-gray;
+		float: right;
+	}
 }
 
 //SUBHED
 .subhed {
-	font-family: $sans-serif;
-	font-size: $s;
+	font-family: $sans-serif-condensed;
+	font-size: $lg;
 	font-weight: bold;
-	text-transform: uppercase; 
+	text-transform: uppercase;
+	margin: 1em 0;
 }
 
 //INSTRUCTIONS
 .instructions {
 	background: whitesmoke;
 	font-family: $sans-serif;
+	font-size: $sm;
 	font-weight: 300;
 	line-height: 1.3;
 	padding: 1em;
 	margin-bottom: 1em; 
 }
 
+//DIVIDER
+hr {
+	border-top: 1.5px solid $border-gray;
+}
+
 //SOURCES
 #sources {
 	font-family: $sans-serif;
 	font-size: $xs;
-	color: $text-gray;
+	color: $text-gray-source;
 	border-top: 1px $line-gray solid;
 	display: table;
 
@@ -156,7 +205,7 @@ body,html {
 
 }
 
-//FOTER
+//FOOTER
 .footer-list {
 	text-align: center;
 	padding: 0px 0 20px 0;
@@ -195,6 +244,10 @@ $tiny-display: 400px;
 	}
 
 	.headline {
-		font-size: 30px;
+		font-size: 25px;
+	}
+
+	.subhed {
+		font-size: $base;
 	}
 }

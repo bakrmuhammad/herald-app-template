@@ -10,11 +10,13 @@ var gulp = require('gulp'),
     nunjucksRender = require('gulp-nunjucks-render'),
     copy = require('gulp-copy'),
     jshint = require('gulp-jshint'),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    shell = require('gulp-shell');
 
 //========
 // FILES  
 //========
+
 var src = {
     app: 'app/',
     scss: 'app/scss/*.scss',
@@ -50,7 +52,7 @@ gulp.task('render', function () {
         nunjuckified = map(function(code){
            return nj.renderString(code.toString(), data);
         }),
-
+        
         env = nj.configure('app', {watch: false});
 
     nunjucksRender.nunjucks.configure(['app/templates/']);
@@ -71,7 +73,7 @@ gulp.task('jshint', function (){
 // Static server + watch scss/html/js files
 gulp.task('serve', ['sass', 'render'], function() {
 
-	// Start browserSync
+    // Start browserSync
     browserSync({
         server: './app'
     });
@@ -119,15 +121,20 @@ gulp.task('copy', function() {
 
     return gulp.src(files)
         .pipe(copy('build/'));
-
 });
+
+// Download Google Sheet data 
+// and update data.json
+gulp.task('fetch', shell.task([
+  'npm run fetch/spreadsheet',
+]));
 
 //====================
 // COMMAND LINE TASKS  
 //====================
 
 // Run server for development
-gulp.task('default', ['serve']);
+gulp.task('default', ['fetch', 'serve']);
 
 // Build all files into 
 // deployable 'build' folder

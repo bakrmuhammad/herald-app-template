@@ -1,23 +1,30 @@
 {
-  "devDependencies": {
-    "bower-installer": "^1.2.0",
+  "name": "herald-app-template",
+  "version": "1.0.0",
+  "description": "Miami Herald template for all interactive graphcs",
+  "main": "gulpfile.js",
+  "bin": {
+    "herald-app-template": "authorize.js"
+  },
+  "dependencies": {
     "browser-sync": "^2.7.12",
     "chalk": "^1.0.0",
-    "fs": "0.0.2",
+    "bower-installer": "^1.2.0",
+    "fs": "^0.0.2",
     "googleapis": "^2.0.5",
     "gulp": "^3.9.0",
-    "gulp-copy": "0.0.2",
-    "gulp-jshint": "^1.11.0",
+    "gulp-copy": "^0.0.2",
     "gulp-load-plugins": "^1.0.0-rc.1",
-    "gulp-minify-css": "^1.1.6",
+    "gulp-jshint": "^1.11.0",
+    "gulp-minify-css": "^1.2.0",
     "gulp-nunjucks-render": "^0.2.1",
-    "gulp-sass": "^2.0.1",
+    "gulp-sass": "^2.0.2",
     "inquirer": "^0.8.5",
     "jshint-stylish": "^2.0.1",
-    "marked": "^0.3.3",
     "nconf": "^0.7.1",
+    "marked": "^0.3.3",
     "nunjucks": "^1.3.4",
-    "open": "0.0.5",
+    "open": "^0.0.5",
     "request": "^2.58.0",
     "untildify": "^2.1.0",
     "vinyl-map": "^1.0.1",
@@ -26,5 +33,15 @@
   "scripts": {
     "authorize/spreadsheet": "node ./bin/authorize.js",
     "fetch/spreadsheet": "node ./bin/fetch_spreadsheet.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisalcantara/herald-app-template.git"
+  },
+  "author": "Chris Alcantara (calcantara@miamiherald.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisalcantara/herald-app-template/issues"
+  },
+  "homepage": "https://github.com/chrisalcantara/herald-app-template#readme"
 }
