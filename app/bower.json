@@ -28,9 +28,6 @@
       "d3" : [
         "bower_components/d3/d3.min.js"
       ],
-      "font-awesome": [
-        "bower_components/font-awesome/css/font-awesome.min.css"
-      ],
       "jquery": [
         "bower_components/jquery/dist/jquery.min.js"
       ],      

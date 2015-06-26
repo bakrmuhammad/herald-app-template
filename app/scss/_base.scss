@@ -1,7 +1,5 @@
-
 // MIAMI HERALD STYLESHEET
 // Made with love by Chris Alcantara (@chrisalcantara)
-
 
 // ===========
 // TYPOGRAPHY
@@ -10,18 +8,23 @@
 // Roboto Slab: Default serif
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300");
 
-// Roboto: Default sans-serif
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
+//Raleway: Subheds and labels
+@import url("http://fonts.googleapis.com/css?family=Raleway:900");
 
-// Roboto Condensed: Subheds and labels
+// Roboto Condensed: Mini heds
 @import url("http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300");
 
-//FONTS
+// Roboto: Default sans-serif for graphics, captions and sources
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
+
+//FONT VARIABLES
 $sans-serif: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 
 $sans-serif-condensed: "Roboto Condensed", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 
 $serif: "Roboto Slab", "Times New Roman", Times, serif;
+
+$raleway: "Raleway", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 
 //STANDARD FONT SIZES
 $base: 16px;
@@ -32,10 +35,13 @@ $md: 18px;
 $sm: 14px;
 $xs: 12px;
 
+//CUSTOM SIZES
+$headline: 45px;
+
 //FONT SIZE CLASS MIXINS
 @mixin font-size($f, $pct:1) {
-        font-size: $f; // for IE8
-    }
+	font-size: $f; // for IE8
+}
 
 // These classes can be applied to any element
 // to set the font-size.
@@ -73,9 +79,6 @@ $xs: 12px;
 .font-xs {
 	@include font-size($xs, .9);
 }
-
-//CUSTOM SIZES
-$headline: 40px;
 
 //HEADERS
 h1,h2,h3,h4,h5,h6 {
@@ -125,12 +128,17 @@ body,html {
 
 .sig {
 	font-weight: bold;
+	font-family: $raleway;
 	text-transform: uppercase; 
+}
+
+.facebook, .twitter, .google-plus {
+	display: none;
 }
 
 //LABEL
 .graphic-label {
-  font-family: $sans-serif;
+  font-family: $raleway;
   color: $red;
   display: block;
   font-weight: 900;
@@ -139,31 +147,40 @@ body,html {
 
 //HEADLINE
 .headline {
-  font-family: $sans-serif;
+  font-family: $serif;
   font-size: $headline;
   line-height: 1em;
-  margin: 7.5px 0 10px 0;
+  margin: 5px 0 10px 0;
   font-weight: 700;
 }
 
 //BYLINE
 .byline {
 	display: table;
-	font-family: $sans-serif;
 	font-size: $sm;
 	display: block;
 	
 	.name {
 		font-weight: bold;
 		display: block;
-	}
-
-	.upper {
 		text-transform: uppercase;
+		font-family: $raleway;
 	}
 
-	.email, .date {
+	.email{
+		display: inline-block;
+		font-family: $serif;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.date {
 		display: block;
+		font-family: $serif;
+		font-size: $xs;
+		color: $text-gray; 
 	}
 }
 
@@ -208,20 +225,17 @@ body,html {
 		display: block;
 	}
 
-
 	.double-photo {
 
 		img {
 			border: 2px solid $white; 
-		}
-		
+		}	
 	}
-
 }
 
 //SUBHED
 .subhed {
-	font-family: $sans-serif-condensed;
+	font-family: $raleway;
 	font-size: $lg;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -234,7 +248,6 @@ body,html {
 	font-size: $md;
 	margin: 1em 0 0.5em 0;
 }
-
 
 //INSTRUCTIONS
 .instructions {
@@ -263,7 +276,6 @@ hr {
 	p {
 		padding: 1em 0 0 0;
 	}
-
 }
 
 //FOOTER
@@ -289,8 +301,6 @@ hr {
 	}
 }
 
-
-
 //BUTTONS
 @mixin btn($color, $type: null) {
   border-radius: 4px;
@@ -301,7 +311,6 @@ hr {
   margin: 0 0 0.3em;
   text-align: center;
   vertical-align: middle;
-
 
   @if $type == ghost {
     background: transparent;
@@ -330,13 +339,12 @@ hr {
 }
 
 .button {
-  @include btn($herald-blue);
+	@include btn($herald-blue);
 }
 
 .ghost-button {
-  @include btn($text-gray, ghost);
+	@include btn($text-gray, ghost);
 }
-
 
 //===========
 //RESPONSIVE
@@ -363,5 +371,17 @@ $tiny-display: 400px;
 
 	.subhed {
 		font-size: $base;
+	}
+
+	.readout {
+		font-size: $sm;
+	}
+
+	.facebook, .twitter, .google-plus {
+		display: block;
+	}
+
+	.fa-facebook, .fa-twitter, .fa-google-plus {
+		display: none;
 	}
 }
