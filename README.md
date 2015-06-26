@@ -90,7 +90,7 @@ JS:
 + jQuery – DOM manipulation
 + Bootsrap – Bootstrap components
 + Modernizr – Detection
-+ Sinclair – Miami Herald's libaray
++ Sinclair – Miami Herald's library
 	
 HTML:
 
