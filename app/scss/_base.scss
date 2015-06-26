@@ -32,6 +32,48 @@ $md: 18px;
 $sm: 14px;
 $xs: 12px;
 
+//FONT SIZE CLASS MIXINS
+@mixin font-size($f, $pct:1) {
+        font-size: $f; // for IE8
+    }
+
+// These classes can be applied to any element
+// to set the font-size.
+%font-xxl,
+.font-xxl {
+	@include font-size($xxl, .9);
+}
+
+%font-xl,
+.font-xl {
+	@include font-size($xl, .9);
+}
+
+%font-lg,
+.font-lg {
+	@include font-size($lg, .9);
+}
+
+%font-md,
+.font-md {
+	@include font-size($md, .9);
+}
+
+%font-base,
+.font-base {
+	@include font-size($base, .9);
+}
+
+%font-sm,
+.font-sm {
+	@include font-size($sm, .9);
+}
+
+%font-xs,
+.font-xs {
+	@include font-size($xs, .9);
+}
+
 //CUSTOM SIZES
 $headline: 40px;
 
@@ -93,7 +135,6 @@ body,html {
   display: block;
   font-weight: 900;
   text-transform: uppercase; 
-
 }
 
 //HEADLINE
@@ -140,11 +181,21 @@ body,html {
 	}
 
 	//PHOTOS
-	.photo {
+	.single-photo, .double-photo {
 		width: 100%;
 	}
 
 	img {
+		display: block;
+		width: 100%;
+	}
+
+	.photog {
+		font-family: $sans-serif;
+		margin: 0.25em 0;
+		font-size: $xs;
+		color: $text-gray;
+		text-align: right;
 		display: block;
 		width: 100%;
 	}
@@ -154,16 +205,18 @@ body,html {
 		margin: 0.25em 0;
 		font-size: $sm;
 		color: $text-gray;
-		display: inline-block;
+		display: block;
 	}
 
-	.photog {
-		font-family: $sans-serif;
-		margin: 0.25em 0;
-		font-size: $sm;
-		color: $text-gray;
-		float: right;
+
+	.double-photo {
+
+		img {
+			border: 2px solid $white; 
+		}
+		
 	}
+
 }
 
 //SUBHED
@@ -174,6 +227,14 @@ body,html {
 	text-transform: uppercase;
 	margin: 1em 0;
 }
+
+//TINYHED
+.tinyhed {
+	font-family: $sans-serif-condensed;
+	font-size: $md;
+	margin: 1em 0 0.5em 0;
+}
+
 
 //INSTRUCTIONS
 .instructions {
@@ -228,7 +289,60 @@ hr {
 	}
 }
 
+
+
+//BUTTONS
+@mixin btn($color, $type: null) {
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $sans-serif;
+  letter-spacing: .03rem;
+  margin: 0 0 0.3em;
+  text-align: center;
+  vertical-align: middle;
+
+
+  @if $type == ghost {
+    background: transparent;
+    border: 2px solid $color;
+    color: $color;
+    padding: .4em .75em .5em;
+  } @else {
+    background: $color;
+    @if $color == $herald-blue {
+     color: $white;
+    } @else {
+      color: $bodytext-black;
+    }
+    border: 0px;
+    padding: .5em .75em .625em;
+  }
+
+  &:active,
+  &:hover {
+    @if $type == ghost {
+      background-color: transparentize($color, 0.95);
+    } @else {
+      background-color: transparentize($color, .3);
+    }
+  }
+}
+
+.button {
+  @include btn($herald-blue);
+}
+
+.ghost-button {
+  @include btn($text-gray, ghost);
+}
+
+
+//===========
 //RESPONSIVE
+//===========
+
+//BREAKPOINTS
 $large-display: 1200px;
 $medium-display: 992px;
 $small-display: 767px;
