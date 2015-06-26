@@ -13,7 +13,7 @@
 	<meta property="og:title" content="{{ COPY.headline }}"/>
 	<meta property="og:type" content="article"/> 
 	<meta property="og:description" content="{{ COPY.seo_description }}"/>
-	<meta property="og:image" content="{{ COPY.fb_img }}"/>
+	<meta property="og:image" content="{{ COPY.fb_img_url }}"/>
 	<meta property="og:url" content="{{ COPY.url }}"/>
 	<meta property="og:site_name " content="Miami Herald"/> 
 
@@ -22,12 +22,12 @@
 	<meta name="twitter:creator" content="@MiamiHerald">
 	<meta name="twitter:title" content="{{ COPY.headline }}">
 	<meta name="twitter:description" content="{{ COPY.seo_description }}">
-	<meta name="twitter:image" content="{{ COPY.fb_img }}">
+	<meta name="twitter:image" content="{{ COPY.fb_img_url }}">
 
 	<link rel="icon" type="image/jpg" href="http://www.miamiherald.com/static/theme/miamiherald/base/ico/favicon.png"/>
-	<link rel="image_src" href="{{ COPY.fb_img }}" />
+	<link rel="image_src" href="{{ COPY.fb_img_url }}" />
 
-	<title>{{ COPY.headline }}</title>
+	<title>{{ COPY.headline }} | Miami Herald</title>
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/libs/bootstrap.css">
@@ -50,7 +50,7 @@
         <a class="navbar-brand-img mobile-img" href="http://miamiherald.com">
           <img src="http://pubsys.miamiherald.com/static/media/projects/libraries/images/h_b.png" class="logo">
         </a>
-        <a class="navbar-brand sig" href="{{ COPY.link }}">{{ COPY.sig }}</a>
+        <a class="navbar-brand sig" href="{{ COPY.url }}">{{ COPY.sig }}</a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
