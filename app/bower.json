@@ -13,8 +13,9 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "font-awesome": "latest",
-    "d3": "latest"
+    "bootstrap": "latest",
+    "d3": "latest",
+    "modernizr": "latest"
   },
   "install" : {
     "path" : {

@@ -4193,7 +4193,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 17px 15px;
   font-size: 14px;
   line-height: 20px;
-  font-family: "Roboto", Helvetica, Arial, sans-serif
 }
 
 .navbar-brand-img {
@@ -4426,7 +4425,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+/*  color: none;*/
   background-color: transparent;
 }
 .navbar-default .navbar-text {
