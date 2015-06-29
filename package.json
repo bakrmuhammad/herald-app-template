@@ -1,11 +1,8 @@
 {
   "name": "herald-app-template",
   "version": "1.0.0",
-  "description": "Miami Herald template for all interactive graphcs",
+  "description": "Miami Herald template for all interactive graphics",
   "main": "gulpfile.js",
-  "bin": {
-    "herald-app-template": "authorize.js"
-  },
   "dependencies": {
     "browser-sync": "^2.7.12",
     "chalk": "^1.0.0",
