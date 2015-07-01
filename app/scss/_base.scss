@@ -269,6 +269,7 @@ hr {
 #sources {
 	font-family: $sans-serif;
 	font-size: $xs;
+	max-width: 300px;
 	color: $text-gray-source;
 	border-top: 1px $line-gray solid;
 	display: table;
