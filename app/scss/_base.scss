@@ -197,6 +197,10 @@ body,html {
 
 	a {
 		color: $red;
+		
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	//PHOTOS
