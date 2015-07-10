@@ -102,7 +102,7 @@ gulp.task('copy', function() {
         cssLibs: 'app/css/libs/**/*.css',
         js: 'app/js/*.js',
         jsLibs: 'app/js/libs/**/*.js',
-        img: 'app/img/',
+        img: 'app/img/*.jpg',
         dataCSV: 'app/js/libs/data/*.csv', 
         dataJSON:'app/js/libs/data/*.json'
     };
