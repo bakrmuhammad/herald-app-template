@@ -26,6 +26,7 @@ $serif: "Roboto Slab", "Times New Roman", Times, serif;
 
 $raleway: "Raleway", "Helvetica Nueue", Helvetica, Arial, sans-serif;
 
+
 //STANDARD FONT SIZES
 $base: 16px;
 $xxl: 36px;
@@ -34,6 +35,7 @@ $lg: 22px;
 $md: 18px;
 $sm: 14px;
 $xs: 12px;
+$xxs: 10px;
 
 //CUSTOM SIZES
 $headline: 45px;
@@ -233,6 +235,26 @@ body,html {
 	}
 }
 
+//Credit and caption outside <figure>
+.photog {
+	font-family: $sans-serif;
+	margin: 0.25em 0 0 0;
+	font-size: $xxs;
+	color: $text-gray;
+	text-align: right;
+	display: block;
+	width: 100%;
+}
+
+.caption {
+	font-family: $sans-serif;
+	margin: 0.5em 0 0.5em 0;
+	font-size: $xs;
+	color: $text-gray;
+	display: block;
+}
+
+
 //SUBHED
 .subhed {
 	font-family: $raleway;
@@ -265,17 +287,20 @@ hr {
 	border-top: 1.5px solid $border-gray;
 }
 
+.dotted {
+	border-top: 1.5px dashed $border-gray;
+}
+
 //SOURCES
 #sources {
 	font-family: $sans-serif;
 	font-size: $xs;
-	max-width: 300px;
+	max-width: 485px;
 	color: $text-gray-source;
-	border-top: 1px $line-gray solid;
 	display: table;
 
 	p {
-		padding: 1em 0 0 0;
+		padding: 0.5em 0 0 0;
 	}
 }
 
@@ -304,20 +329,26 @@ hr {
 
 //BUTTONS
 @mixin btn($color, $type: null) {
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $sans-serif;
-  letter-spacing: .03rem;
-  margin: 0 0 0.3em;
-  text-align: center;
-  vertical-align: middle;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $sans-serif;
+	letter-spacing: .03rem;
+	margin: 0 0 0.3em;
+	text-align: center;
+	vertical-align: middle;
+    -webkit-transition: border-color .218s;
+    -moz-transition: border .218s;
+    -o-transition: border-color .218s;
+    transition: border-color .218s;
 
   @if $type == ghost {
     background: transparent;
     border: 2px solid $color;
     color: $color;
-    padding: .4em .75em .5em;
+    padding: 7px 12px;
   } @else {
     background: $color;
     @if $color == $herald-blue {
@@ -326,15 +357,21 @@ hr {
       color: $bodytext-black;
     }
     border: 0px;
-    padding: .5em .75em .625em;
+    padding: 7px 12px;
   }
 
   &:active,
   &:hover {
     @if $type == ghost {
       background-color: transparentize($color, 0.95);
+      -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); 
+      -webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     } @else {
-      background-color: transparentize($color, .3);
+    	background-color: transparentize($color, .3);
+    	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    	-webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
+    	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     }
   }
 }
