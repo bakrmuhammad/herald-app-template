@@ -6344,6 +6344,24 @@ button.close {
   display: table;
   content: " ";
 }
+
+
+@media (min-width: 768px) {
+  
+  .navbar:before,
+  .navbar:after,
+  .navbar-header:before,
+  .navbar-header:after,
+  .navbar-collapse:before,
+  .navbar-collapse:after {
+
+    display: none;
+    content: " ";
+  }
+
+  }
+}
+
 .clearfix:after,
 .dl-horizontal dd:after,
 .container:after,

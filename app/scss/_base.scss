@@ -134,9 +134,23 @@ body,html {
 	text-transform: uppercase; 
 }
 
-.facebook, .twitter, .google-plus {
-	display: none;
+
+.navbar-collapse.collapse {
+	display: block!important;
 }
+
+.navbar-nav>li, .navbar-nav {
+	float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0px !important;
+}
+
+.navbar-right {
+	float: right!important;
+}
+
 
 //LABEL
 .graphic-label {
@@ -239,7 +253,6 @@ body,html {
 	}
 }
 
-//Credit and caption outside <figure>
 .photog {
 	font-family: $sans-serif;
 	margin: 0.25em 0 0 0;
@@ -257,8 +270,6 @@ body,html {
 	color: $text-gray;
 	display: block;
 }
-
-
 //SUBHED
 .subhed {
 	font-family: $raleway;
@@ -277,7 +288,7 @@ body,html {
 
 //INSTRUCTIONS
 .instructions {
-	background: whitesmoke;
+	// background: whitesmoke;
 	font-family: $sans-serif;
 	font-size: $sm;
 	font-weight: 300;
@@ -419,11 +430,7 @@ $tiny-display: 400px;
 		font-size: $sm;
 	}
 
-	.facebook, .twitter, .google-plus {
-		display: block;
-	}
-
 	.fa-facebook, .fa-twitter, .fa-google-plus {
-		display: none;
+		font-size: $md;
 	}
 }

@@ -1,17 +1,20 @@
 {
   "COPY": {
     "key": "value",
-    "sig": "Sig goes here",
+    "sig": "Graphic stylesheet",
     "label": "Label goes here",
-    "headline": "This is a dummy headline for the new Miami Herald news app template",
+    "headline": "Miami Herald interactive stylesheet",
     "reporter_name": "Chris Alcantara",
     "email": "calcantara@miamiherald.com",
-    "date": "April 30, 2015",
-    "readout": "This is the readout for the Miami Herald app template.This is the readout for the Miami Herald app template. This is the readout for the Miami Herald app template. This is the readout for the Miami Herald app template.",
+    "date": "June 26, 2015",
+    "readout": "This is the Miami Herald’s stylesheet for all interactive graphics. The page is built on an improved, responsive graphics template and includes styles featured in previous projects. It also acts as a resource for anyone who needs the necessary fonts, colors or styles for a project. This page is a work in progress, and any feedback would be greatly appreciated.",
     "sources": "FBI, DEA and Miami-Dade County",
     "seo_description": "",
     "key_words": "",
-    "fb_img": "",
-    "url": ""
+    "fb_img_url": "",
+    "url": "",
+    "fbShareLink": "",
+    "twShareLink": "",
+    "gpShareLink": ""
   }
 }
