@@ -69,4 +69,4 @@ If all systems go:
 
 4. If there's anything wrong. Check to make sure you have the following at the ~. `~/.mh_app_google_client_secrets.json` and  `~/.mh_app_token.json`.
 
-Questions or suggestions? Contact me at [calcantara@miamiherald.com](mailto:calcantara@miamiherald.com)#Miami Herald graphics template
+Questions or suggestions? Contact me at [calcantara@miamiherald.com](mailto:calcantara@miamiherald.com)
