@@ -26,7 +26,7 @@ var src = {
     html: 'app/*.html',
     indexTemplate: 'app/templates/index.html',
     templates: 'app/templates/*.html',
-    data: ['app/js/libs/data/data.csv','app/js/libs/data/data.json']
+    data: ['app/js/libs/data/*.csv','app/js/libs/data/*.json']
 };
 
 //===========
