@@ -147,6 +147,7 @@ body, html {
   margin: 1em 0 0.5em 0; }
 
 .instructions {
+  background: whitesmoke;
   font-family: "Roboto", "Helvetica Nueue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -165,9 +166,15 @@ hr {
   font-size: 12px;
   max-width: 485px;
   color: #9b9b9b;
-  display: table; }
+  display: table;
+  border-top: 1px solid #ccc; }
   #sources p {
     padding: 0.5em 0 0 0; }
+
+.comments {
+  margin-top: 1em;
+  background: whitesmoke;
+  padding: 0.25em; }
 
 .footer-list {
   text-align: center;

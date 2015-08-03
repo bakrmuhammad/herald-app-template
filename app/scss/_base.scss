@@ -311,10 +311,18 @@ hr {
 	max-width: 485px;
 	color: $text-gray-source;
 	display: table;
+	border-top: 1px solid $border-gray;
 
 	p {
 		padding: 0.5em 0 0 0;
 	}
+}
+
+//COMMENTS
+.comments {
+	margin-top: 1em;
+	background: whitesmoke;
+	padding: 0.25em;
 }
 
 //FOOTER

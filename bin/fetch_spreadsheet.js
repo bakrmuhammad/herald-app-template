@@ -27,7 +27,7 @@ nconf.env().file('./config.json');
 nconf.defaults({
   'MH_APP_GOOGLE_CLIENT_SECRETS': '~/.mh_app_google_client_secrets.json',
   'MH_APP_TOKEN': '~/.mh_app_token.json',
-  'google_spreadsheet_key' : '1EB0Xq0mt_MkszaBHeSpIWGdlSnt0errmxo7pQqTdvCw',
+  'google_spreadsheet_key' : '18W7NCwbzqz077ZX0Koz0XSnYGzT6c-nPKsxSfFJR05A',
   "google_spreadsheet_type": "objectlist",
   "sheet_overrides": {
     "COPY": "keyvalue"

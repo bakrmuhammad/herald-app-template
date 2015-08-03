@@ -26,6 +26,7 @@ var src = {
     html: 'app/*.html',
     indexTemplate: 'app/templates/index.html',
     templates: 'app/templates/*.html',
+    includes: 'app/templates/includes/*.html',
     data: ['app/js/libs/data/*.csv','app/js/libs/data/*.json']
 };
 
@@ -88,7 +89,7 @@ gulp.task('serve', ['sass', 'render'], function() {
     gulp.watch([src.js, src.jsLibs], ['jshint']).on('change', reload);
 
     // Watch the HTML templates and reload on change
-    gulp.watch(src.templates, ['render']).on('change', reload);
+    gulp.watch([src.templates, src.includes], ['render']).on('change', reload);
 
 });
 
