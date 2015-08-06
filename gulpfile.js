@@ -27,7 +27,7 @@ var src = {
     indexTemplate: 'app/templates/index.html',
     templates: 'app/templates/*.html',
     includes: 'app/templates/includes/*.html',
-    data: ['app/js/libs/data/*.csv','app/js/libs/data/*.json']
+    data: ['app/js/libs/data/*.csv','app/js/libs/data/*.json', 'app/js/libs/data/*.geojson']
 };
 
 //===========
@@ -104,8 +104,10 @@ gulp.task('copy', function() {
         js: 'app/js/*.js',
         jsLibs: 'app/js/libs/**/*.js',
         img: 'app/img/*.jpg',
+        png: 'app/img/*.png',
         dataCSV: 'app/js/libs/data/*.csv', 
-        dataJSON:'app/js/libs/data/*.json'
+        dataJSON:'app/js/libs/data/*.json',
+        dataGeoJSON:'app/js/libs/data/*.geojson'
     };
 
     // Group them into files var
@@ -114,10 +116,12 @@ gulp.task('copy', function() {
         buildSrc.css, 
         buildSrc.cssLibs,
         buildSrc.js,
-        buildSrc.img, 
+        buildSrc.img,
+        buildSrc.png, 
         buildSrc.jsLibs,
         buildSrc.dataCSV,
-        buildSrc.dataJSON
+        buildSrc.dataJSON,
+        buildSrc.dataGeoJSON
     ];
 
     return gulp.src(files)

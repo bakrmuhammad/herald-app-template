@@ -1,15 +1,13 @@
 {% extends "templates/base.html" %}
 
 {% block content %}
-<div class="container"><!-- BEGIN CONTAINER -->
-
 	<!-- HEADLINE AND BYLINE -->
 	<span class="graphic-label">{{ COPY.label }}</span>
 	<div class="headline">{{ COPY.headline }}</div>
 	<div class="byline">
 		<span class="name">By <span class="upper">{{ COPY.reporter_name }}</span></span>
-		<a href="mailto:{{ COPY.email }}"><span class="email">{{ COPY.email }}</span></a>
-		<span class="date">{{ COPY.date }}</span>
+		<a href="mailto:{{ COPY.email }}"><span class="email">{{ COPY.email }}@MiamiHerald.com</span></a>
+		<span class="date">Published: {{ COPY.date }}</span>
 	</div>
 
 	<!-- READOUT -->
@@ -28,5 +26,4 @@
 		<p>Sources: {{ COPY.sources }}</p>
 	</div>
 
-</div><!-- END CONTAINER -->
 {% endblock %}
