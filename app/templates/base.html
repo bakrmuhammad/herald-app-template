@@ -9,27 +9,20 @@ Greetings. I'm @ChrisAlcantara. I code for the @MiamiHerald.
 <!DOCTYPE html>
 <html>
   <head>
-  
-    <!-- META TAGS -->
+    <!-- META TAGS and CSS -->
     {% include 'templates/includes/_head.html' %}
-    
     <title>{{ COPY.headline }} | Miami Herald</title>
-
   </head>
   <body>
-      
       <!-- NAVBAR -->
       {% include 'templates/includes/_nav.html' %}
-      
       <!-- CONTENT -->
       <div class="container">
         {% block content %}{% endblock %}
         {% include 'templates/includes/_fb.html' %}
       </div>
-      
-      <!-- LIBRARIES -->
+      <!-- JS LIBRARIES -->
       {% include 'templates/includes/_js-libs.html' %}
-      
       <!-- ANALYTICS -->
       {% include 'templates/includes/_analytics.html' %}
 
