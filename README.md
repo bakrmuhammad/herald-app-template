@@ -68,5 +68,3 @@ If all systems go:
 3. Running `gulp` will update the text thanks to [gulp-shell](https://www.npmjs.com/package/gulp-shell), which takes care of writing `npm run fetch/spreadsheet` in the command line. The spreadsheet is downloaded into `data.json`. Nunjucks will take the data and write into `index.html` and `base.html`.
 
 4. If there's anything wrong. Check to make sure you have the following at the ~. `~/.mh_app_google_client_secrets.json` and  `~/.mh_app_token.json`.
-
-Questions or suggestions? Contact me at [calcantara@miamiherald.com](mailto:calcantara@miamiherald.com)
